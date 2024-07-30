@@ -1,0 +1,255 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background:url("./images/travel-background1.webp");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.container{
+    max-width: 100%;
+    min-height: 100vh;
+    margin:auto;
+    padding:1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.nav_logo span{
+    max-width: 70px;
+    color:turquoise
+}
+
+.nav_links{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.link a{
+    text-decoration: none;
+    font-weight: 600;
+    color:blue;
+}
+
+.search{
+    max-width:300px;
+    height: 30px;
+    padding:10px;
+    display:flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: white;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.search input{
+    width:100%;
+    font-size: 1rem;
+    color:blue;
+    outline: none;
+    border:none;
+}
+
+.search span{
+    font-size: 20px;
+}
+
+.login{
+    padding:10px;
+    display:flex;
+    align-items: center;
+    gap:1rem;
+    font-weight: 600;
+    background-color: white;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login:hover{
+    background-color: black;
+    color: white;
+}
+
+.login span{
+    font-size: 15px;
+}
+
+.destinationc{
+    position:relative;
+    padding:5rem 0 5rem 5rem;
+    flex:1;
+    gap:2rem;
+    align-items:center;
+}
+
+.socials{
+    position: absolute;
+    top:25rem;
+    left:0;
+    display:flex;
+    flex-direction: column;
+    gap:1.5rem;
+}
+
+.socials::after{
+    position:absolute;
+    content:"";
+    top:-20rem;
+    left:10px;
+    height:19rem;
+    width:2px;
+    background-color: white;
+}
+
+.socials span{
+    font-size: 2rem;
+    color: white;
+}
+
+.content{
+    padding-left: 3rem;
+    padding-top: 3rem;
+}
+
+.content h1{
+    margin-bottom: 1rem;
+    font-size: 4.5rem;
+    font-weight: 800;
+    color:white;
+
+}
+
+.content p{
+    max-width:350px;
+    margin-bottom: 2rem;
+    line-height: 1.5rem;
+    color:white;
+}
+
+.content .btn{
+    padding:20px;
+    outline:none;
+    border:none;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    color:black;
+    cursor:pointer;
+
+}
+
+.content .btn:hover{
+    background-color: black;
+    color: white;
+}
+
+.destination_grid{
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 60px;
+}
+
+.destination_card{
+    height:100%;
+    background-color: white;
+}
+
+.destination_card img{
+    width: 100%;
+    height:250px;
+}
+
+.card__content{
+    padding:1rem;
+}
+
+.card__content h4{
+    margin-bottom: .5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.card__content p{
+    margin-bottom: 1rem;
+    font-size: .9rem;
+    line-height: 1.5rem;
+}
+
+.card__content .btn{
+    padding: .5rem 1rem;
+    outline:none;
+    border:none;
+    font-weight: 500;
+    color:white;
+    background-color:black;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+
+
+@media (width < 1200px) {
+  .search {
+    max-width: 235px;
+  }
+
+  .destinationc {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (width < 900px) {
+  .nav__links {
+    display: none;
+  }
+
+  .content h1 {
+    font-size: 4rem;
+  }
+
+  .destination_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width < 600px) {
+  .search {
+    display: none;
+  }
+
+  .destinationc {
+    padding-left: 3rem;
+  }
+
+  .content h1 {
+    font-size: 3rem;
+  }
+
+  .destination_grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+
+
+
+
